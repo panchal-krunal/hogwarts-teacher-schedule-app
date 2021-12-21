@@ -33,13 +33,13 @@
 
 
 Home Page - 
-![Home page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/master/images/home.png?raw=true)
+![Home page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/blob/master/images/home.png?raw=true)
 
 
 Attendance page -
-![Attendance page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/master/images/attendance.png?raw=true)
+![Attendance page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/blob/master/images/attendance.png?raw=true)
 
 
 Student teacher allocation page -
-![Student teacher page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/master/images/student-teacher.png?raw=true)
+![Student teacher page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/blob/master/images/student-schedule.png?raw=true)
 
