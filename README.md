@@ -41,5 +41,5 @@ Attendance page -
 
 
 Student teacher allocation page -
-![Student teacher page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/blob/master/images/student-schedule.png?raw=true)
+![Student teacher page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/blob/master/images/student-teacher.png?raw=true)
 
