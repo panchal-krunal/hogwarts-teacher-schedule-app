@@ -6,17 +6,17 @@ const Home = (props) => {
       <Col>
         <Row>
           <Col md="auto">
-            <h3>Hogwarts Teacher Schedule App</h3>
+            <h3 data-test="header-label">Hogwarts Teacher Schedule App</h3>
           </Col>
         </Row>
         <Row>
           <Col xs lg="2">
-            <a href="/attendance">Attendance</a>
+            <a href="/attendance" data-test="attendance-button">Attendance</a>
           </Col>
         </Row>
         <Row>
           <Col xs lg="2">
-            <a href="/student-schedule">Student Schedule</a>
+            <a href="/student-schedule" data-test="schedule-button">Student Schedule</a>
           </Col>
         </Row>
       </Col>

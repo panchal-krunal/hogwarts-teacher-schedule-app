@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Table } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "../helpers/react-redux-hooks";
 import students from "../helpers/config/students";
 import { assignTeacher } from "../redux/actions/studentActions";
 
@@ -64,13 +64,12 @@ const StudendSchedule = (props) => {
     } else return { name: "not assigned" };
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     getAllocatedTeacher();
   }, []);
 
   const renderTableRow = () => {
     if (!allocatedStudents) return;
-    console.log(allocatedStudents);
     return (
       <tbody>
         {allocatedStudents?.length !== 0 &&

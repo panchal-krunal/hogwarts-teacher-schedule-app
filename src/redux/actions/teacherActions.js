@@ -1,4 +1,4 @@
-import { TOGGLE_TEACHER_PRESENCE } from "../types";
+import { TOGGLE_TEACHER_PRESENCE,DUMMY_ACTION } from "../types";
 
 export const toggleAttendance = (id, isPresent) => (dispatch) => {
   dispatch({
@@ -6,6 +6,14 @@ export const toggleAttendance = (id, isPresent) => (dispatch) => {
     payload: {
       id,
       isPresent,
+    },
+  });
+};
+export const dummyAction = () => (dispatch) => {
+  dispatch({
+    type: DUMMY_ACTION,
+    payload: {
+      id: 1,
     },
   });
 };

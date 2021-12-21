@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Table } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "../helpers/react-redux-hooks";
 import * as actions from "../redux/actions/teacherActions";
 
 const TeacherAttendance = (props) => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
-  const { teachers } = state?.teacherReducer || null;
-  const { subjects } = state?.subjectReducer || null;
+  const { teachers } = state?.teacherReducer;
+  const { subjects } = state?.subjectReducer;
 
-  const onPresentAbsentDropdownChange = async(e, id) => {
+  const onPresentAbsentDropdownChange = async (e, id) => {
     await dispatch(actions.toggleAttendance(id, e.target.value));
   };
 
@@ -21,7 +21,7 @@ const TeacherAttendance = (props) => {
           Object.keys(teachers).map((item, index) => {
             const { name, reporting_to, isPresent, subject } = teachers[item];
             const reportingToName = teachers[reporting_to]?.name || "";
-            const subjectName = subjects?.[subject]?.name || '';
+            const subjectName = subjects?.[subject]?.name || "";
             return (
               <tr key={item}>
                 <td>{index + 1}</td>
@@ -43,6 +43,13 @@ const TeacherAttendance = (props) => {
       </tbody>
     );
   };
+
+  // const dispatchDummyAction = async () => {
+  //   await dispatch(actions.dummyAction());
+  // };
+  // React.useEffect(() => {
+  //   dispatchDummyAction();
+  // }, []);
 
   return (
     <Container>
