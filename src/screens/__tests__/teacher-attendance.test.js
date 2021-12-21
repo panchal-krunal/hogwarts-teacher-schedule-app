@@ -8,6 +8,7 @@ import subjects from "../../helpers/config/subjects";
 import * as ReactReduxHooks from "../../helpers/react-redux-hooks";
 // import * as teacherActions from "../../redux/actions/teacherActions";
 import thunk from "redux-thunk";
+import {TOGGLE_TEACHER_PRESENCE} from '../../redux/types'
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("teacher attendance component renders correctly", () => {
@@ -88,7 +89,7 @@ describe("teacher attendance component renders correctly", () => {
     });
     const expectedAction = [
       {
-        type: "TOGGLE_TEACHER_PRESENCE",
+        type: TOGGLE_TEACHER_PRESENCE,
         payload: { id: "ql_HP3WWb5", isPresent: false },
       },
     ];

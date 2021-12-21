@@ -1,29 +1,29 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
 import { useSelector, useDispatch } from "../helpers/react-redux-hooks";
-import students from "../helpers/config/students";
+import allStudents from "../helpers/config/students";
 import { assignTeacher } from "../redux/actions/studentActions";
 
 const StudendSchedule = (props) => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const { teachers } = state?.teacherReducer;
-  const { students: allocatedStudents } = state?.studentReducer;
+  const { students } = state?.studentReducer;
   const { subjects } = state?.subjectReducer;
 
   const getAllocatedTeacher = async () => {
     let studentTeacher = [];
-    students &&
-      Object.keys(students).map((s, _) => {
+    allStudents &&
+      Object.keys(allStudents).map((s, _) => {
         if (students[s]?.teacherAllocated) {
           console.log(
             students[s].name,
-            getTeacher(students[s]?.teacherAllocated).name
+            getTeacher(allStudents[s]?.teacherAllocated).name
           );
           studentTeacher.push({
-            student: students[s]?.name,
-            subject: students[s]?.subject,
-            teacher: getTeacher(students[s]?.teacherAllocated).name,
+            student: allStudents[s]?.name,
+            subject: allStudents[s]?.subject,
+            teacher: getTeacher(allStudents[s]?.teacherAllocated).name,
           });
         } else {
           const headOfSubject =
@@ -31,16 +31,16 @@ const StudendSchedule = (props) => {
             Object.keys(teachers).filter((t, _) => {
               if (
                 teachers[t]?.subject.toString() ===
-                  students[s]?.subject.toString() &&
+                allStudents[s]?.subject.toString() &&
                 teachers[t]?.isHeadingSubject
               ) {
                 return teachers[t];
               }
             });
-          console.log(students[s].name, getTeacher(headOfSubject[0]).name);
+          console.log(allStudents[s].name, getTeacher(headOfSubject[0]).name);
           studentTeacher.push({
-            student: students[s]?.name,
-            subject: students[s]?.subject,
+            student: allStudents[s]?.name,
+            subject: allStudents[s]?.subject,
             teacher: getTeacher(headOfSubject[0]).name,
           });
         }
@@ -69,11 +69,11 @@ const StudendSchedule = (props) => {
   }, []);
 
   const renderTableRow = () => {
-    if (!allocatedStudents) return;
+    if (!students) return;
     return (
       <tbody>
-        {allocatedStudents?.length !== 0 &&
-          allocatedStudents.map((item, index) => {
+        {students && students?.length !== 0 &&
+          students.map((item, index) => {
             return (
               <tr key={index}>
                 <td>{index + 1}</td>
