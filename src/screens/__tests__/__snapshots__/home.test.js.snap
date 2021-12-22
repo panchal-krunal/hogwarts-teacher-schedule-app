@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component renders correctly should render correctly 1`] = `
+<Container
+  fluid={false}
+>
+  <Col>
+    <Row>
+      <Col
+        md="auto"
+      >
+        <h3
+          data-test="header-label"
+        >
+          Hogwarts Teacher Schedule App
+        </h3>
+      </Col>
+    </Row>
+    <Row>
+      <Col
+        lg="2"
+        xs={true}
+      >
+        <a
+          data-test="attendance-button"
+          href="/attendance"
+        >
+          Attendance
+        </a>
+      </Col>
+    </Row>
+    <Row>
+      <Col
+        lg="2"
+        xs={true}
+      >
+        <a
+          data-test="schedule-button"
+          href="/student-schedule"
+        >
+          Student Schedule
+        </a>
+      </Col>
+    </Row>
+  </Col>
+</Container>
+`;

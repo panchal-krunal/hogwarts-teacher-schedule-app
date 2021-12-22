@@ -9,6 +9,8 @@ import * as ReactReduxHooks from "../../helpers/react-redux-hooks";
 // import * as teacherActions from "../../redux/actions/teacherActions";
 import thunk from "redux-thunk";
 import {TOGGLE_TEACHER_PRESENCE} from '../../redux/types'
+import toJson from "enzyme-to-json";
+
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("teacher attendance component renders correctly", () => {
@@ -42,7 +44,11 @@ describe("teacher attendance component renders correctly", () => {
 
     wrapper = mount(<TeacherAttendance />);
   });
-
+  test("should render correctly", () => {
+    const tree = toJson(wrapper);
+    expect(tree).toMatchSnapshot();
+    expect(wrapper).toHaveLength(1);
+  });
   it("should render table", () => {
     const tableElement = wrapper.find("table");
     expect(tableElement).toHaveLength(1);

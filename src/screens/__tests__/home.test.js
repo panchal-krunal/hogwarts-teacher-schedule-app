@@ -1,10 +1,17 @@
 import React from 'react'
 import Enzyme, { shallow ,mount} from 'enzyme'
+import toJson from "enzyme-to-json";
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import Home from '../home'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('Home component renders correctly', () => {
+  test("should render correctly", () => {
+    const wrapper = shallow(<Home />);
+    const tree = toJson(wrapper);
+    expect(tree).toMatchSnapshot();
+    expect(wrapper).toHaveLength(1);
+  });
   it('should render header', () => {
     const wrapper = shallow(<Home />)
     const headerElement  = wrapper.find('[data-test="header-label"]');

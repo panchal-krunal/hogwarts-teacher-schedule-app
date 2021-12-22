@@ -11,6 +11,8 @@ import StudendSchedule from "../student-schedule";
 import students from "../../helpers/config/students";
 import { assignTeacher } from "../../redux/actions/studentActions";
 import { ASSIGN_TEACHER } from "../../redux/types";
+import toJson from "enzyme-to-json";
+
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("teacher attendance component renders correctly", () => {
@@ -81,7 +83,11 @@ describe("teacher attendance component renders correctly", () => {
       },
     ];
   });
-
+  test("should render correctly", () => {
+    const tree = toJson(wrapper);
+    expect(tree).toMatchSnapshot();
+    expect(wrapper).toHaveLength(1);
+  });
   it("should find table", () => {
     const tableElement = wrapper.find("table");
     expect(tableElement).toHaveLength(1);
