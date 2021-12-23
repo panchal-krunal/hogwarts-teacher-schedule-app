@@ -132,7 +132,7 @@ const Home = (props) => {
       <Col>
         <Row>
           <Col md="auto">
-            <h5 data-test="header-label">Teachers Attendance</h5>
+            <h5 >Teachers Attendance</h5>
           </Col>
         </Row>
       </Col>
@@ -157,7 +157,7 @@ const Home = (props) => {
       <Col>
         <Row>
           <Col md="auto">
-            <h5 data-test="header-label">Students Schedule</h5>
+            <h5 >Students Schedule</h5>
           </Col>
         </Row>
       </Col>
