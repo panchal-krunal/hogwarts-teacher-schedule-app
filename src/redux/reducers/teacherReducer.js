@@ -2,7 +2,7 @@ import { TOGGLE_TEACHER_PRESENCE, ALLOCATE_SUBJECT } from "../types";
 import teachers from "../../helpers/config/teachers";
 
 let initialState = {
-  teachers: { ...teachers },
+  teachers: teachers,
 };
 
 export default (state = initialState, action) => {

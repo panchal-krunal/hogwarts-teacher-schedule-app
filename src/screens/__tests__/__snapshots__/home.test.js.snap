@@ -1,47 +1,367 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home component renders correctly should render correctly 1`] = `
-<Container
-  fluid={false}
->
-  <Col>
-    <Row>
-      <Col
-        md="auto"
-      >
-        <h3
-          data-test="header-label"
+exports[`tests for home component should render correctly 1`] = `
+<Home>
+  <Container
+    fluid={false}
+  >
+    <div
+      className="container"
+    >
+      <Col>
+        <div
+          className="col"
         >
-          Hogwarts Teacher Schedule App
-        </h3>
+          <Row>
+            <div
+              className="row"
+            >
+              <Col
+                md="auto"
+              >
+                <div
+                  className="col-md-auto"
+                >
+                  <h3
+                    data-test="header-label"
+                  >
+                    Hogwarts Teacher Schedule App
+                  </h3>
+                </div>
+              </Col>
+            </div>
+          </Row>
+        </div>
       </Col>
-    </Row>
-    <Row>
-      <Col
-        lg="2"
-        xs={true}
-      >
-        <a
-          data-test="attendance-button"
-          href="/attendance"
+      <Col>
+        <div
+          className="col"
         >
-          Attendance
-        </a>
+          <Row>
+            <div
+              className="row"
+            >
+              <Col
+                lg="8"
+                xs={true}
+              >
+                <div
+                  className="col-lg-8 col"
+                >
+                  <ForwardRef
+                    bordered={true}
+                    data-test="teachers-table"
+                    hover={true}
+                    striped={true}
+                  >
+                    <table
+                      className="table table-striped table-bordered table-hover"
+                      data-test="teachers-table"
+                    >
+                      <thead>
+                        <tr>
+                          <th>
+                            #
+                          </th>
+                          <th>
+                            Teacher
+                          </th>
+                          <th>
+                            Subject
+                          </th>
+                          <th>
+                            Reporting To
+                          </th>
+                          <th>
+                            Attendance
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          key="ql_HP3WWb5"
+                        >
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            Professor Dumbledore
+                          </td>
+                          <td />
+                          <td />
+                          <td>
+                            <select
+                              onChange={[Function]}
+                              value={true}
+                            >
+                              <option
+                                value={false}
+                              >
+                                Absent
+                              </option>
+                              <option
+                                value={true}
+                              >
+                                Present
+                              </option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr
+                          key="ihUHzDMgDf"
+                        >
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            Minerva McGonagall
+                          </td>
+                          <td />
+                          <td>
+                            Professor Dumbledore
+                          </td>
+                          <td>
+                            <select
+                              onChange={[Function]}
+                              value={true}
+                            >
+                              <option
+                                value={false}
+                              >
+                                Absent
+                              </option>
+                              <option
+                                value={true}
+                              >
+                                Present
+                              </option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr
+                          key="vWljuJ10kr"
+                        >
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            Rubeus Hagrid
+                          </td>
+                          <td>
+                            Potions master
+                          </td>
+                          <td>
+                            Minerva McGonagall
+                          </td>
+                          <td>
+                            <select
+                              onChange={[Function]}
+                              value={true}
+                            >
+                              <option
+                                value={false}
+                              >
+                                Absent
+                              </option>
+                              <option
+                                value={true}
+                              >
+                                Present
+                              </option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr
+                          key="e6Xah9MirI"
+                        >
+                          <td>
+                            4
+                          </td>
+                          <td>
+                            Horace Slughorn
+                          </td>
+                          <td>
+                            Potions master
+                          </td>
+                          <td>
+                            Rubeus Hagrid
+                          </td>
+                          <td>
+                            <select
+                              onChange={[Function]}
+                              value={true}
+                            >
+                              <option
+                                value={false}
+                              >
+                                Absent
+                              </option>
+                              <option
+                                value={true}
+                              >
+                                Present
+                              </option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr
+                          key="SV4mio1jYY"
+                        >
+                          <td>
+                            5
+                          </td>
+                          <td>
+                            Severus Snape
+                          </td>
+                          <td>
+                            Potions master
+                          </td>
+                          <td>
+                            Rubeus Hagrid
+                          </td>
+                          <td>
+                            <select
+                              onChange={[Function]}
+                              value={true}
+                            >
+                              <option
+                                value={false}
+                              >
+                                Absent
+                              </option>
+                              <option
+                                value={true}
+                              >
+                                Present
+                              </option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr
+                          key="xhxpdg8RzN"
+                        >
+                          <td>
+                            6
+                          </td>
+                          <td>
+                            Alastor Moody
+                          </td>
+                          <td>
+                            Defense Against the Dark Arts
+                          </td>
+                          <td>
+                            Minerva McGonagall
+                          </td>
+                          <td>
+                            <select
+                              onChange={[Function]}
+                              value={true}
+                            >
+                              <option
+                                value={false}
+                              >
+                                Absent
+                              </option>
+                              <option
+                                value={true}
+                              >
+                                Present
+                              </option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr
+                          key="rCkLspfCxE"
+                        >
+                          <td>
+                            7
+                          </td>
+                          <td>
+                            Gilderoy Lockhart
+                          </td>
+                          <td>
+                            Defense Against the Dark Arts
+                          </td>
+                          <td>
+                            Alastor Moody
+                          </td>
+                          <td>
+                            <select
+                              onChange={[Function]}
+                              value={true}
+                            >
+                              <option
+                                value={false}
+                              >
+                                Absent
+                              </option>
+                              <option
+                                value={true}
+                              >
+                                Present
+                              </option>
+                            </select>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </ForwardRef>
+                </div>
+              </Col>
+            </div>
+          </Row>
+        </div>
       </Col>
-    </Row>
-    <Row>
-      <Col
-        lg="2"
-        xs={true}
-      >
-        <a
-          data-test="schedule-button"
-          href="/student-schedule"
+      <Col>
+        <div
+          className="col"
         >
-          Student Schedule
-        </a>
+          <Row>
+            <div
+              className="row"
+            >
+              <Col
+                lg="8"
+                xs={true}
+              >
+                <div
+                  className="col-lg-8 col"
+                >
+                  <ForwardRef
+                    bordered={true}
+                    data-test="students-table"
+                    hover={true}
+                    striped={true}
+                  >
+                    <table
+                      className="table table-striped table-bordered table-hover"
+                      data-test="students-table"
+                    >
+                      <thead>
+                        <tr>
+                          <th>
+                            #
+                          </th>
+                          <th>
+                            Student Name
+                          </th>
+                          <th>
+                            Subject
+                          </th>
+                          <th>
+                            Allocated Teacher
+                          </th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </ForwardRef>
+                </div>
+              </Col>
+            </div>
+          </Row>
+        </div>
       </Col>
-    </Row>
-  </Col>
-</Container>
+    </div>
+  </Container>
+</Home>
 `;
