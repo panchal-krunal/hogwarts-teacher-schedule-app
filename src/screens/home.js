@@ -131,6 +131,13 @@ const Home = (props) => {
       </Col>
       <Col>
         <Row>
+          <Col md="auto">
+            <h5 data-test="header-label">Teachers Attendance</h5>
+          </Col>
+        </Row>
+      </Col>
+      <Col>
+        <Row>
           <Col xs lg="8">
             <Table data-test="teachers-table" striped bordered hover>
               <thead>
@@ -144,6 +151,13 @@ const Home = (props) => {
               </thead>
               {renderTeachers()}
             </Table>
+          </Col>
+        </Row>
+      </Col>
+      <Col>
+        <Row>
+          <Col md="auto">
+            <h5 data-test="header-label">Students Schedule</h5>
           </Col>
         </Row>
       </Col>
