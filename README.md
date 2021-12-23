@@ -28,7 +28,7 @@
 - /src/redux - all related to redux
 - /src/redux/actions - all actions
 - /src/redux/reducers - all reducers
-- /src/screens - all individual screens
+- /src/screens - Home screen (SPA)
 - /src/components - empty for now, but all isolated components will be placed here
 - /helpers/config - configuration files (Constants)
 - App.js - Navigation
@@ -37,14 +37,6 @@
 - src/screens/__test__/__snapshots__ - This includes snapshots for screens
 - src/redux/reducers/__tests__ - This includes all tests for reducers
 
-Home Page - 
-![Home page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/blob/master/images/home.png?raw=true)
-
-
-Attendance page -
-![Attendance page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/blob/master/images/attendance.png?raw=true)
-
-
-Student teacher allocation page -
-![Student teacher page](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/blob/master/images/student-teacher.png?raw=true)
+Screenshot - 
+![Screenshot for Teacher attendance & Student allocation table](https://github.com/panchal-krunal/hogwarts-teacher-schedule-app/blob/master/images/final.png?raw=true)
 
